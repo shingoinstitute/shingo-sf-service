@@ -1,0 +1,35 @@
+{
+  "name": "@shingo/sf-service",
+  "version": "1.0.0-beta",
+  "description": "Provides an api for the shingo salesforce service",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json && cp src/*.proto dist",
+    "clean": "rm -rf dist && rm -rf docs",
+    "docs": "rm -rf docs && typedoc --out docs --target ES5 --module commonjs --excludeExternals --tsconfig ./tsconfig.json --excludePrivate --excludeNotExported src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shingoinstitute/shingo-sf-service.git"
+  },
+  "author": "Abraham White <abelincoln.white@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shingoinstitute/shingo-sf-service/issues"
+  },
+  "homepage": "https://github.com/shingoinstitute/shingo-sf-service#readme",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.20",
+    "alsatian": "^2.1.0",
+    "nyc": "^11.4.1",
+    "type-zoo": "^1.2.1",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "grpc": "^1.8.4"
+  }
+}
